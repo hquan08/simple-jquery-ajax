@@ -50,7 +50,11 @@ async function postDetail(id) {
     let data = await resp.json();
 
     //populate the Post Details section
+    //fixed: set some div text to an empty string to prevent from looping them
     $('#info').remove();
+    $('#dtitle').text("");
+    $('#dId').text("");
+    $('#dBody').text("");
     $('#dtitle').text("Post title: " + data.title);
     $('#dId').text("Post Id: " + data.id);
     $('#dBody').append('<h5 class="font-weight-bold">Content:</h5>', data.body);
