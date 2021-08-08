@@ -1,0 +1,36 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#info {
+  color: red;
+}
+
+#getInfo:hover {
+  background-color: orange;
+  border-color: orange;
+  color: black;
+  font-weight: bold;
+}
+
+#bigtitle:hover {
+  color: red;
+  font-style: italic;
+}
+
+#bigtitle {
+  margin-top: 100px;
+  justify-content: center;
+  align-items: center;
+}
+
+#ptit:hover {
+  font-weight: bold;
+  font-style: italic;
+  color: navy;
+}
+
+#pbo:hover {
+  font-weight: bolder;
+}

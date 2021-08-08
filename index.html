@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./index.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <title>jQuery Course | Learn basic AJAX and more...</title>
+
+</head>
+<body>
+    <div class="container">
+        <!--Simple header-->
+        <section class="header text-center p-3 bg-dark text-white fixed-top container">
+            <h2>Jquery Course</h2>
+        </section>
+
+        <div class="text-center">
+            <h2 id="bigtitle">The Posts</h2>
+        </div>
+        <!--Posts details-->
+        <div id="result" class="mt-4">
+        </div>
+        <section id="detailPost" class="mt-5 p-5 bg-dark">   
+            <h2 class="text-center text-white">Post Details</h2>
+        </section>
+        <div class="text left mt-5">
+            <h4 class="text-center" id="info">Post details will only appear if you click on detail button of each post</h4>
+            <h3 id="dtitle"></h3>
+            <h4 id="dId"></h4>
+            <p id="dBody"></p>
+        </div>
+        
+        <!--Create a new post with AJAX-->
+        <section class="bg-dark p-5 mb-5">
+            <h2 class="text-center text-white">Upload Posts</h2>
+        </section>
+        <form class="mb-3" id="formInput" action="https://jsonplaceholder.typicode.com/posts">
+            <h3 class="text-success">Create your new post here</h3><hr>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Your post title"/ required id="title">
+            </div>
+            <div class="form-group">
+                <textarea class="form-control" rows="3" placeholder="Your post content goes here..." required id="body"></textarea>
+            </div>
+            <input type="submit" id="submit" class="btn btn-primary" value="Submit"/>
+            <div class="clearfix">
+                <div class="spinner-border mt-2"  id="spin" role="status">
+                  <span class="sr-only">Loading...</span>
+                </div>
+            </div>
+            <span class="text-muted font-italic">Note: You can press F12 to see your data has been submitted to the JSONPLACEHOLDER server</span>
+        </form>
+
+        <!--footer-->
+        <footer class="p-5 position-relative bg-dark text-white font-weight-bold text-center">
+            <h2 class="mb-3">
+                <p class="text-monospace lead">This is a footer</p>
+                <a href="github.com/hquan2508" target="_blank" class="text-decoration-none mr-5" data-toggle="tooltip" data-placement="top" title="My Github">
+                    <i class="bi bi-github text-white"></i>
+                </a>
+                <a href="twitter.com/mantra250899" target="_blank" class="text-decoration-none" data-toggle="tooltip" data-placement="top" title="My Twitter">
+                    <i class="bi bi-twitter text-white" id="gi"></i>
+                </a>
+            </h2>
+            <p class="text-monospace">JSONPlaceholder credits go to <a href="https://github.com/typicode" target="_blank">typicode</a></p>
+            <p class="text-monospace">jQuery & AJAX Crash Course credits go to <a href="https://github.com/bradtraversy" target="_blank">Traversy Media</a></p>
+            <a href="#" data-container="body" class="text-decoration-none mb-2" data-toggle="tooltip" data-placement="top" title="Back to top">
+                <i class="bi bi-arrow-up-circle-fill h1 text-white"></i>
+            </a>
+        </footer>
+    </div>
+
+
+
+    <!--Script for JS-->
+    <script src="index.js"></script>
+</body>
+</html>
